@@ -20,28 +20,34 @@ int main()
 
     cout << "How many bank transactions did you make that day?" << endl; // asking the iser for amount of transactions
     cin >> transactionsAmount;
+    cout << "what type of transaction? Please enter either credit or debit!" << endl;
+    cin >> typeOf;
+    cout<< "how much was the tranaction?"<< endl;
+    cin>> transMoney;
 
+    
     while(transactionsAmount > 0)
     {
-        cout << "what type of transaction? Please enter either credit or debit!" << endl;
-        cin >> typeOf;
-        cout<< "how much was the tranaction?"<< endl;
-        cin>> transMoney;
+      
         if ( typeOf == "debit")
         {
-            cout<< (startAmount - transMoney) << endl;
+            cout<< "you now have" << (startAmount - transMoney) << endl;
         }
 
-        else
+       else if ( typeOf == "credit")
         {
             cout << (startAmount + transMoney) << endl;
         }
-        
 
-        
+        cout << "theres" << (transactionsAmount - 1) << endl;
 
+        return 0;
 
     }
+
+    
+
+    
 
   
 
